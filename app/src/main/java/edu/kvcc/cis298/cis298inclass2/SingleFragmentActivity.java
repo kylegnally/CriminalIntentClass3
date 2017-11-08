@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
+import android.support.v7.app.AppCompatActivity;
 
 /**
  * Created by cisco on 10/16/2017.
@@ -12,7 +13,7 @@ import android.support.v4.app.FragmentManager;
 //This is a generic Activity good for hosting a single fragment.
 //It inherits from FragmentActivity of the support library
 //It is an abstract class, so it can't be instantiated.
-public abstract class SingleFragmentActivity extends FragmentActivity {
+public abstract class SingleFragmentActivity extends AppCompatActivity {
 
     //This declares a abstract method for creating a fragment
     //that can be hosted in this activity.

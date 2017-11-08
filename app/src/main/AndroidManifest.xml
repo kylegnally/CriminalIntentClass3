@@ -20,7 +20,8 @@
         <!--<activity android:name=".CrimeActivity">-->
 
         <!--New Way with ViewPager-->
-        <activity android:name=".CrimePagerActivity">
+        <activity android:name=".CrimePagerActivity"
+            android:parentActivityName=".CrimeListActivity">
         </activity>
     </application>
 

@@ -41,12 +41,17 @@ public class CrimeLab {
         mCrimes = new ArrayList<>();
 
         //This is just dummy data that we will remove later
-        for (int i = 0; i < 100; i++) {
+        for (int i = 0; i < 5; i++) {
             Crime crime = new Crime();
             crime.setTitle("Crime #" + i);
             crime.setSolved(i % 2 == 0); //Every other one
             mCrimes.add(crime);
         }
+    }
+
+    //Add a new crime to the list
+    public void addCrime(Crime c) {
+        mCrimes.add(c);
     }
 
     //Getter for all of the crimes
