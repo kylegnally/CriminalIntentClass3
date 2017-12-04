@@ -145,6 +145,17 @@ public class CrimeFragment extends Fragment {
     }
 
     @Override
+    public void onPause() {
+        super.onPause();
+
+        //When the fragment pauses
+        //(Which suggests we are returning to the recycler view)
+        //We will call updateCrime to persist the changes to the DB.
+        CrimeLab.get(getActivity())
+                .updateCrime(mCrime);
+    }
+
+    @Override
     public void onActivityResult(int requestCode, int resultCode, Intent data) {
         //If the result code is not RESULT_OK skip doing work.
         if (resultCode != Activity.RESULT_OK) {

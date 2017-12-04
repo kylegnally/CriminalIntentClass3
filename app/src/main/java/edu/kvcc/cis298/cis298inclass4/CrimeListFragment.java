@@ -152,6 +152,10 @@ public class CrimeListFragment extends Fragment {
             //Set the adapter on the Recycler View
             mCrimeRecyclerView.setAdapter(mAdapter);
         } else {
+            //Force an update of the crime list when a new crime is added
+            //Set the crimes for the adapter
+            mAdapter.setCrimes(crimes);
+
             //Tell the adapter that the data set has changed, which will
             //force a reload of all the data.
             mAdapter.notifyDataSetChanged();
@@ -279,6 +283,10 @@ public class CrimeListFragment extends Fragment {
         @Override
         public int getItemCount() {
             return mCrimes.size();
+        }
+
+        public void setCrimes(List<Crime> crimes) {
+            mCrimes = crimes;
         }
     }
 
